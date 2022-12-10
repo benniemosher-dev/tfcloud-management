@@ -31,36 +31,3 @@ resource "tfe_workspace_variable_set" "workspace-variables" {
   variable_set_id = tfe_variable_set.variable-sets[each.value.variable-set-name].id
   workspace_id    = tfe_workspace.workspaces[each.value.workspace-name].id
 }
-
-locals {
-  workspaces = [
-    {
-      name        = "benniemosher-com-infra"
-      description = "🏗 Infrastructure to support the benniemosher.com domain concept. 🏗"
-      variable-sets = [
-        "cloudflare"
-      ]
-    },
-    {
-      name        = "github-management"
-      description = "🥋 Infrastructure managing our Github organization. 🥋"
-      variable-sets = [
-        "github"
-      ]
-    },
-    {
-      name        = "tfcloud-management"
-      description = "☁️ TF managing our TF Cloud organization. ☁️"
-      variable-sets = [
-        "cloudflare",
-        "github",
-        "tfcloud",
-      ]
-    }
-  ]
-
-  workspace-variables = flatten([for space in local.workspaces : [for vs in space.variable-sets : {
-    variable-set-name = vs
-    workspace-name    = space.name
-  }]])
-}

@@ -17,26 +17,3 @@ resource "tfe_variable" "variables" {
   value           = each.value.variable-value
   variable_set_id = tfe_variable_set.variable-sets[each.key].id
 }
-
-locals {
-  variable-sets = [
-    {
-      description    = "The config for connecting to Cloudflare."
-      name           = "cloudflare"
-      sensitive      = true
-      variable-value = jsonencode(var.cloudflare-config)
-    },
-    {
-      description    = "The config for connecting to Github."
-      name           = "github"
-      sensitive      = true
-      variable-value = jsonencode(var.github-config)
-    },
-    {
-      description    = "The config for connecting to TFCloud."
-      name           = "tfcloud"
-      sensitive      = true
-      variable-value = jsonencode(var.tfcloud-config)
-    }
-  ]
-}
