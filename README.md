@@ -1,18 +1,21 @@
-# terraform-domain-concept
+# tfcloud-management
 
-![CI Terraform](https://github.com/benniemosher-dev/terraform-domain-concept/actions/workflows/ci-terraform.yml/badge.svg)
+![CI Terraform](https://github.com/benniemosher-dev/tfcloud-management/actions/workflows/ci-terraform.yml/badge.svg)
 
-🏕 A Terraform domain concept template. 🏕
-
-## ✅ TODO:
-
-Things to change when first creating a domain concept repository:
-
-- [ ] In `README.md` change `terraform-domain-concept` to the name of this domain concept (i.e. `benniemosher-com-infra`, `moniquemosher-com-infra`)
-- [ ] In `providers.tf` update the workspace name
-- [ ] In `README.md` delete the [TODO](README.md#todo) section
+☁️ TF managing our TF Cloud organization. ☁️
 
 ## 📜 Usage:
+
+### To retrieve secrets:
+
+Reach out to [@benniemosher](https://keybase.io/benniemosher) on Keybase and get access to his secrets repo then:
+
+```bash
+git clone keybase://private/benniemosher/secrets
+ln -s $HOME/Code/personal/secrets/tfcloud.auto.tfvars ./tfcloud.auto.tfvars
+ln -s $HOME/Code/personal/secrets/cloudflare.auto.tfvars ./cloudflare.auto.tfvars
+ln -s $HOME/Code/personal/secrets/github.auto.tfvars ./github.auto.tfvars
+```
 
 - To install dependencies needed run:
   ```bash
@@ -81,16 +84,18 @@ Things to change when first creating a domain concept repository:
 ## 📋 Documentation
 
 <!-- BEGIN_TF_DOCS -->
-
 ## Requirements
 
-| Name                                                                     | Version |
-| ------------------------------------------------------------------------ | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | ~> 1.3  |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
+| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | ~> 0.38 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.40.0 |
 
 ## Modules
 
@@ -98,14 +103,25 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [tfe_oauth_client.github](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/oauth_client) | resource |
+| [tfe_organization.organizations](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization) | resource |
+| [tfe_variable.variables](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable_set.variable-sets](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set) | resource |
+| [tfe_workspace.workspaces](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
+| [tfe_workspace_variable_set.workspace-variables](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cloudflare-config"></a> [cloudflare-config](#input\_cloudflare-config) | The config to connect Terraform to Cloudflare | <pre>object({<br>    account-id = optional(string, null)<br>    api-token  = string<br>    cidrs      = list(string)<br>  })</pre> | n/a | yes |
+| <a name="input_config"></a> [config](#input\_config) | The config for your organization in TFCloud. | <pre>object({<br>    domain   = string<br>    org-name = string<br>  })</pre> | n/a | yes |
+| <a name="input_github-config"></a> [github-config](#input\_github-config) | The config for connecting to Github. | <pre>object({<br>    token = string<br>  })</pre> | n/a | yes |
+| <a name="input_tfcloud-config"></a> [tfcloud-config](#input\_tfcloud-config) | The config for connecting to TFCloud. | <pre>object({<br>    token = string<br>  })</pre> | n/a | yes |
 
 ## Outputs
 
 No outputs.
-
 <!-- END_TF_DOCS -->

@@ -4,8 +4,17 @@ terraform {
   cloud {
     organization = "benniemosher-dev"
     workspaces {
-      # TODO: Change this to match the workspace name
-      name = "terraform-domain-concept"
+      name = "tfcloud-management"
     }
   }
+
+  required_providers {
+    tfe = {
+      version = "~> 0.38"
+    }
+  }
+}
+
+provider "tfe" {
+  token = var.tfcloud-config.token
 }
