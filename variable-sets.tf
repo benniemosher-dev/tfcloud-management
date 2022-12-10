@@ -31,6 +31,12 @@ locals {
       name           = "github"
       sensitive      = true
       variable-value = jsonencode(var.github-config)
+    },
+    {
+      description    = "The config for connecting to TFCloud."
+      name           = "tfcloud"
+      sensitive      = true
+      variable-value = jsonencode(var.tfcloud-config)
     }
   ]
 }

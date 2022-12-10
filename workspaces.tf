@@ -47,6 +47,15 @@ locals {
       variable-sets = [
         "github"
       ]
+    },
+    {
+      name        = "tfcloud-management"
+      description = "☁️ TF managing our TF Cloud organization. ☁️"
+      variable-sets = [
+        "cloudflare",
+        "github",
+        "tfcloud",
+      ]
     }
   ]
 
