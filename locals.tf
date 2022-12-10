@@ -30,6 +30,13 @@ locals {
       ]
     },
     {
+      name        = "cloudflare-management"
+      description = "🗿 TF managing our Cloudflare organization. 🗿"
+      variable-sets = [
+        "cloudflare"
+      ]
+    },
+    {
       name        = "github-management"
       description = "🥋 Infrastructure managing our Github organization. 🥋"
       variable-sets = [
