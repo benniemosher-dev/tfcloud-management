@@ -89,12 +89,14 @@ ln -s $HOME/Code/personal/secrets/github.auto.tfvars ./github.auto.tfvars
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
 | <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | ~> 0.38 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
+| <a name="provider_github"></a> [github](#provider\_github) | 5.12.0 |
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.40.0 |
 
 ## Modules
@@ -105,8 +107,10 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_actions_organization_secret.org-token](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) | resource |
 | [tfe_oauth_client.github](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/oauth_client) | resource |
 | [tfe_organization.organizations](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization) | resource |
+| [tfe_organization_token.org-token](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization_token) | resource |
 | [tfe_variable.variables](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
 | [tfe_variable_set.variable-sets](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set) | resource |
 | [tfe_workspace.workspaces](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |

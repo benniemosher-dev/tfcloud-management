@@ -11,3 +11,13 @@ resource "tfe_organization" "organizations" {
     ]
   }
 }
+
+resource "tfe_organization_token" "org-token" {
+  organization = tfe_organization.organizations.id
+}
+
+resource "github_actions_organization_secret" "org-token" {
+  secret_name     = "TF_API_TOKEN"
+  visibility      = "all"
+  plaintext_value = tfe_organization_token.org-token.token
+}
