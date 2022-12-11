@@ -9,10 +9,20 @@ terraform {
   }
 
   required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.0"
+    }
+
     tfe = {
       version = "~> 0.38"
     }
   }
+}
+
+provider "github" {
+  token = var.github-config.token
+  owner = var.config.org-name
 }
 
 provider "tfe" {
