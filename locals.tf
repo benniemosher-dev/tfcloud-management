@@ -40,7 +40,8 @@ locals {
       name        = "github-management"
       description = "🥋 Infrastructure managing our Github organization. 🥋"
       variable-sets = [
-        "github"
+        "cloudflare",
+        "github",
       ]
     },
     {
