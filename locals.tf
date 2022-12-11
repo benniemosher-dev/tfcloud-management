@@ -52,7 +52,14 @@ locals {
         "github",
         "tfcloud",
       ]
-    }
+    },
+    {
+      name        = "quest-infra"
+      description = "🏔 Infrastructure to support the quest. 🏔"
+      variable-sets = [
+        "cloudflare"
+      ]
+    },
   ]
 
   workspace-variables = flatten([for space in local.workspaces : [for vs in space.variable-sets : {
