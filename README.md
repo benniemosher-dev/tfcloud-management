@@ -111,6 +111,8 @@ No modules.
 | [tfe_oauth_client.github](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/oauth_client) | resource |
 | [tfe_organization.organizations](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization) | resource |
 | [tfe_organization_token.org-token](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization_token) | resource |
+| [tfe_team.owners](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/team) | resource |
+| [tfe_team_token.owners](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/team_token) | resource |
 | [tfe_variable.variables](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
 | [tfe_variable_set.variable-sets](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set) | resource |
 | [tfe_workspace.workspaces](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |

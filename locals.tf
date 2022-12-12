@@ -54,8 +54,9 @@ locals {
       ]
     },
     {
-      name        = "quest-infra"
-      description = "🏔 Infrastructure to support the quest. 🏔"
+      name           = "quest-infra"
+      description    = "🏔 Infrastructure to support the quest. 🏔"
+      execution-mode = "local"
       variable-sets = [
         "cloudflare"
       ]

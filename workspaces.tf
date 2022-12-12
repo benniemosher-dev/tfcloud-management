@@ -2,6 +2,7 @@ resource "tfe_workspace" "workspaces" {
   for_each = { for space in local.workspaces : space.name => space }
 
   description           = try(each.value.description, null)
+  execution_mode        = try(each.value.execution-mode, "remote")
   file_triggers_enabled = try(each.value.file-triggers-enabled, false)
   force_delete          = try(each.value.force-delete, false)
   name                  = each.value.name

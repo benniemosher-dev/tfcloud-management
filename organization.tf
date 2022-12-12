@@ -16,8 +16,17 @@ resource "tfe_organization_token" "org-token" {
   organization = tfe_organization.organizations.id
 }
 
+resource "tfe_team" "owners" {
+  name         = "owners"
+  organization = var.config.org-name
+}
+
+resource "tfe_team_token" "owners" {
+  team_id = tfe_team.owners.id
+}
+
 resource "github_actions_organization_secret" "org-token" {
   secret_name     = "TF_API_TOKEN"
   visibility      = "all"
-  plaintext_value = tfe_organization_token.org-token.token
+  plaintext_value = tfe_team_token.owners.token
 }
