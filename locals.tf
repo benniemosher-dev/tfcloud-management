@@ -58,7 +58,8 @@ locals {
       description    = "🏔 Infrastructure to support the quest. 🏔"
       execution-mode = "local"
       variable-sets = [
-        "cloudflare"
+        "cloudflare",
+        "tfcloud"
       ]
     },
   ]
