@@ -2,22 +2,22 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/tfe" {
-  version     = "0.40.0"
+  version     = "0.43.0"
   constraints = "~> 0.38"
   hashes = [
-    "h1:mg/eLksRbrVDoEYzt1Ly/AAlRkUKNMURMIpPzX5nu8M=",
-    "zh:0584e2e0ee0794d1b47bcf9502f370a39363043c4fe87ff00ceba49d4c18db9b",
-    "zh:1b3586feb1b9327121fa935a9c1d7680004ade14de3ed8362c683f5838ec6c0f",
-    "zh:53b64ef590836edef3a6f7396e51652fb56ab735986cc2334847dea85e527b78",
-    "zh:70ec39ad78298fcc3ac7dc24a0a56b5847897382c61bc3bcf6bb3f5c863d40aa",
-    "zh:75f0c277acc90e348fe0c36c8bc6b1143182177d0ff6fa3626aec169151eca60",
-    "zh:8792e8baa9daa5bb22b68a2a00c0403505a7e941785a93bbd2cecd1de56d43fe",
-    "zh:9ece3439983bae1dcb6ea080010bc66d9ffc2d55fd2d9505fc3a88d42ddce51e",
-    "zh:a37c2476cd58a1b00232cf5dbb2760f8c458bc937f449cdd9b24d55a37a8e7b7",
-    "zh:ba8389074d37c66d37296d905b3aaf348db5a6bce372842d75925b957dcb5129",
-    "zh:bc8d88671807793e4cb651d681ff67b5cb7622912dc47a71e38181bc93bfec7b",
+    "h1:NRoRsTjIsaNYC8H1Yk9iwYyyfIztLlk8a3TFZ2pIe64=",
+    "zh:091aab22fc9a9ca28951fe5aab5e1522e62d63963f1a32b5dc5cf65ef2bc5aae",
+    "zh:45ed67613daa7472e71f070165b0bb48c90bf1087e3672dfebae89322d3404eb",
+    "zh:5fc55c86be50fa5a1762026c253e3f4ff531a27116b661d2e1e4d37f6a918d6b",
+    "zh:6631e5643af589337702cabf982bd3acdf524865ad3d67cc2f3c0098e825727c",
+    "zh:6b635f9ebb276830410dd4f4ed9b3a91059ba6d7703eab71c26ae14a7b4a9e3c",
+    "zh:829537f6edea999972d91c9f1b135b03faabdcd5d945c0d98be92503f6aa1b93",
+    "zh:ace0593ba69b776fc562c5d8ceac64676556ac2c8b3badd632efca0754a6acd3",
+    "zh:afcb5c3ba8ee6d4f2944664d59bc7b6d0888851f57c9f311c2b422489f4ca5ac",
+    "zh:b0119d5bfbce1b70505271edf2aac3c5c449e8682a7dd1d220e776d031e59a8b",
+    "zh:d54ea33ef57bdf6cf4020aab7da77472d312d16d1bc310dbccdc39acee98af71",
     "zh:d95ec293fa70e946b6cd657912b33155f8be3413e6128ed2bfa5a493f788e439",
-    "zh:ef8c816590ab34557487ff1408ff1a9bc40d1db11af994695255939a94343795",
+    "zh:e48598bc78c6c590ab578736e52726a4daf254ad4472cc447f08c1dc1efb0aa3",
   ]
 }
 
