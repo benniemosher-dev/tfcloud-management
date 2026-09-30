@@ -15,7 +15,7 @@ terraform {
     }
 
     tfe = {
-      version = "~> 0.73"
+      version = "~> 0.81"
     }
   }
 }
