@@ -3,7 +3,7 @@
 
 provider "registry.terraform.io/hashicorp/tfe" {
   version     = "0.81.0"
-  constraints = "~> 0.81"
+  constraints = "0.81.0"
   hashes = [
     "h1:C72vtDBV+KxcRhEmX5SovRgrZYgEt7yhlWle+45V0dw=",
     "h1:DNdxmfy7fn6jcD0pe4LEH5wiCQ3HfgO4mj72VqSN2OM=",
@@ -35,7 +35,7 @@ provider "registry.terraform.io/hashicorp/tfe" {
 
 provider "registry.terraform.io/integrations/github" {
   version     = "6.13.0"
-  constraints = "~> 6.0"
+  constraints = "6.13.0"
   hashes = [
     "h1:2kD+4leuV8tBBXv+EPeehmfW6cDhIzVki61OXsGCtRI=",
     "h1:99s0C+KmzXIsUJY0tKlgfcFUIuuXjCK0TAeeZ8HaOZQ=",
