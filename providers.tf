@@ -1,5 +1,5 @@
 terraform {
-  required_version = "~> 1.3"
+  required_version = "1.16.4"
 
   cloud {
     organization = "benniemosher-dev"
@@ -11,11 +11,11 @@ terraform {
   required_providers {
     github = {
       source  = "integrations/github"
-      version = "~> 6.0"
+      version = "6.13.0"
     }
 
     tfe = {
-      version = "~> 0.81"
+      version = "0.81.0"
     }
   }
 }
